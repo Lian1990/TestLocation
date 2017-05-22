@@ -60,6 +60,7 @@
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         [self.locationManager requestAlwaysAuthorization];
         [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+        self.locationManager.pausesLocationUpdatesAutomatically = NO;//自动关闭定位更新
         self.locationManager.distanceFilter = 10.0f;
         [self.locationManager startUpdatingLocation];
     }
